@@ -1,0 +1,130 @@
+.contact-container {
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-box {
+    padding: 2rem;
+    border: 3px solid #690442; /* Green border */
+    border-radius: 12px;
+    background-color: #df7eabcb; /* Semi-transparent dark background */
+    box-shadow: 0px 0px 10px whitesmoke;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.contact-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 1.5rem;
+    }
+}
+
+.contact-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-align: center; 
+}
+
+.contact-text {
+    color: #ffffff;
+    font-size: 1.125rem;
+    line-height: 1;
+    margin: 0 0 1rem 0;
+}
+
+.contact-flex {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.contact-space {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Increased gap for better spacing */
+}
+
+.input-field, 
+.textarea-field {
+    background-color: transparent;
+    border: 2px solid #690442;
+    padding: 0.75rem;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+}
+
+.textarea-field {
+    resize: vertical;
+    height: auto;
+    min-height: 150px;
+}
+
+/* Button styling */
+.button {
+    width: fit-content;
+    background-color: #ac117d;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #555;
+    border-color: #08E95E;
+}
+
+/* Media queries for small screens */
+@media (max-width: 480px) {
+    .contact-box {
+        padding: 1.5rem;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .input-field, 
+    .textarea-field {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

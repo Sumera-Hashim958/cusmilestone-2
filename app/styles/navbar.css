@@ -1,0 +1,94 @@
+/* General Styles */
+.navbar-container {
+    width: 100vw;
+    padding: 1rem 2rem;
+    background-color: #df7eabcb; /* Background color for the navbar */
+    box-shadow: 0px 0px 10px whitesmoke;
+    border: 3px solid #690442;
+    color: #fff;
+    position: relative; /* Positioning to handle the mobile menu */
+    z-index: 10; /* Ensures navbar stays on top */
+}
+
+@media (min-width: 1280px) {
+    .navbar-container {
+        max-width: 1280px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-menu-icon {
+    display: none;
+    cursor: pointer;
+    color: white; /* Ensure the icon is visible */
+}
+
+.navbar-menu {
+    display: none;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Navbar menu links */
+.navbar-menu li a {
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+/* Responsive Style for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide the full-width menu on smaller screens */
+    }
+
+    .navbar-menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    /* Show the mobile menu when open */
+    .navbar-menu.open {
+        display: flex;
+    }
+
+    /* Styles for navbar links in mobile menu */
+    .navbar-menu li a {
+        color: #fff;
+        font-size: 1.25rem;
+        text-decoration: none;
+        padding: 0.5rem 0;
+    }
+}
