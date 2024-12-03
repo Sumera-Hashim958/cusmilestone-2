@@ -92,3 +92,26 @@
         padding: 0.5rem 0;
     }
 }
+
+@media (max-width: 375px) {
+    .navbar-links {
+        display: none; /* Hide the full-width menu on smaller screens */
+    }
+
+    .navbar-menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    /* Show the mobile menu when open */
+    .navbar-menu.open {
+        display: flex;
+    }
+
+    /* Styles for navbar links in mobile menu */
+    .navbar-menu li a {
+        color: #fff;
+        font-size: 1.25rem;
+        text-decoration: none;
+        padding: 0.5rem 0;
+    }
+}

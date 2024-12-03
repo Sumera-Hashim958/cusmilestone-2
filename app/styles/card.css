@@ -15,7 +15,8 @@
     height: auto;
 }
 .card-image-sm{
-    width: 100%;
+    width: 340px;
+    height: 300px;
 }
 .card-content{
     padding: 1rem;

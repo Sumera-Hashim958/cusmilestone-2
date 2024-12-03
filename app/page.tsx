@@ -1,10 +1,18 @@
 import React from 'react'
-// import Navbar from "../app/components/Navbar";
+import Hero from "../app/components/Hero";
+import About from "../app/components/About";
+import Projects from "../app/components/Projects";
+import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 const page = () => {
   return (
     <div>
-      {/* <Navbar></Navbar> */}
+      <Hero/>
+        <About/>
+        <Projects/>
+        <Skills/>
+        <Contact/>
       
     </div>
   )

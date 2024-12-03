@@ -1,26 +1,28 @@
+'use client'
 import "./globals.css";
 import Navbar from "../app/components/Navbar"
-import Hero from "../app/components/Hero"
-import Projects from "../app/components/Projects";
-import Skills from "../app/components/Skills";
 import Footer from "../app/components/Footer";
-import About from "../app/components/About";
-import Contact from "../app/components/Contact";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 export default function RootLayout({children}: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      once: true, // whether animation should happen only once - while scrolling down
+    });
+  }, []);
   return (
     <html lang="en">
       <body>
         <Navbar/>
-        <Hero/>
-        <About/>
-        <Projects/>
-        <Skills/>
-        <Contact/>
-        <Footer/>
+      
         {children}
+        <Footer/>
       </body>
     </html>
   );
